@@ -1,4 +1,5 @@
-import java.util.*;
+// import java.util.*;
+import java.io.*;
 public class factorial {
     static int fact1(int n)
     {
@@ -14,13 +15,16 @@ public class factorial {
             f*=i;
         return f;
     }
-    public static void main(String[] args) {
-        Scanner sc=new Scanner (System.in);
+    public static void main(String[] args) throws Exception
+    {
+        // Scanner sc=new Scanner (System.in);
+        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter a number: ");
-        int num=sc.nextInt();
+        int num= Integer.parseInt(br.readLine());
+        // int num=sc.nextInt();
         int f1=fact1(num);
         int f2=fact2(num);
         System.out.println(f1+" "+f2);
-        sc.close();
+        // sc.close();
     }
 }
